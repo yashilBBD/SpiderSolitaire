@@ -27,11 +27,6 @@ jobs:
           terraform fmt -check --recursive .
         continue-on-error: false
 
-      # - name: "Terraform security check"
-      #   uses: aquasecurity/tfsec-action@v1.0.3
-      #   with:
-      #     working_directory: ${{ env.terraform_directory }}
-
       - name: "Setup tflint"
         uses: terraform-linters/setup-tflint@v4.0.0
         with:
